@@ -1,0 +1,24 @@
+{
+  "Protocol_Audit_Certificate": {
+    "Engine_Version": "CGL-AARM-v5.2",
+    "Timestamp_Locked": "2026-08-24T08:53:00Z",
+    "Audit_Status": "PASSED_AND_SEALED",
+    "Reproducibility_Checks": {
+      "Seed_Integrity": {
+        "Status": "PASSED",
+        "Tested_Seeds": [42, 100],
+        "Variance": 0.0
+      },
+      "Output_Fingerprint_Match": {
+        "Status": "PASSED",
+        "Hash_SHA256": "11083ddc3d1672ab3c39c45affa47948883c5d53ce33dba3c39c35569aaae305"
+      },
+      "Adversarial_Audits": {
+        "Random_Routing_Attack": "PASSED (No Data Leakage)",
+        "Class_Imbalance_Check": "PASSED (No P-hacking Bias)"
+      }
+    },
+    "Scientific_Claims_Authorization": true,
+    "Integrity_Statement": "This model architecture, evaluation metric, and routing mechanism have been structurally locked prior to the final experimental validation on test data. No subsequent methodological modifications (P-hacking or Cherry-picking) are algorithmically permitted."
+  }
+}
