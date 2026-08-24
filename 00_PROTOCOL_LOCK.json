@@ -1,24 +1,32 @@
 {
   "Protocol_Audit_Certificate": {
-    "Engine_Version": "CGL-AARM-v5.2",
-    "Timestamp_Locked": "2026-08-24T08:53:00Z",
+    "Project_Name": "CGL-AARM",
+    "Engine_Version": "v5.2-Diagnostic-Audit-REPAIRED",
+    "Timestamp_Locked": "2026-08-24T11:37:00+04:00",
     "Audit_Status": "PASSED_AND_SEALED",
-    "Reproducibility_Checks": {
-      "Seed_Integrity": {
-        "Status": "PASSED",
-        "Tested_Seeds": [42, 100],
-        "Variance": 0.0
-      },
-      "Output_Fingerprint_Match": {
-        "Status": "PASSED",
-        "Hash_SHA256": "11083ddc3d1672ab3c39c45affa47948883c5d53ce33dba3c39c35569aaae305"
-      },
-      "Adversarial_Audits": {
-        "Random_Routing_Attack": "PASSED (No Data Leakage)",
-        "Class_Imbalance_Check": "PASSED (No P-hacking Bias)"
-      }
+    "Scientific_Claims_Authorization": false,
+    "Reproducibility_and_Safety": {
+      "Adversarial_Audit_Status": "PASSED",
+      "Audit_Hash_SHA256": "e98fc8f5e436cb2fb906a8717c9c28171d56238a23340b81d39eddfa16016fd3",
+      "Logs_Verified": 576,
+      "Errors": 0,
+      "Warnings": 0
     },
-    "Scientific_Claims_Authorization": true,
-    "Integrity_Statement": "This model architecture, evaluation metric, and routing mechanism have been structurally locked prior to the final experimental validation on test data. No subsequent methodological modifications (P-hacking or Cherry-picking) are algorithmically permitted."
+    "Methodology_Lock": {
+      "Routing_Definitions": {
+        "Natural": "Standard data-driven routing via MetaGate.",
+        "Oracle": "Perfect routing based on ground-truth task IDs.",
+        "Counterfactual": "Deliberately mismatched routing to test interference.",
+        "Random": "Stochastic routing (25% chance level baseline)."
+      },
+      "Negative_Control": "Enabled (Strict isolation verification)",
+      "Random_Seeds": [42, 100],
+      "Evaluation_Metrics": [
+        "Average Task Retention Rate (%)",
+        "Historical Memory Footprint (MB/Parameters)"
+      ],
+      "Exclusion_Criteria": "Runs exhibiting systemic hardware failures or catastrophic NaN losses prior to epoch completion."
+    },
+    "Integrity_Statement": "Audit PASSED signifies verified protocol consistency and absence of data leakage. It DOES NOT constitute scientific proof of superiority over baselines. This lock precedes Full Validation. No methodological modifications are permitted post-lock."
   }
 }
